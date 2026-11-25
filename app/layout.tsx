@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col px-10 py-5">
+      <body className="min-h-full flex flex-col px-30 py-5">
         <Header/>
         {children}
         <Footer/>
