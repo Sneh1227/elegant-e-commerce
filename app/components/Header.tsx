@@ -12,7 +12,7 @@ export default function Home() {
                 <Link className=" hover:text-black" href="#product">Product</Link>
                 <Link className=" hover:text-black" href="#contact">Contact Us</Link>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-4">
                 <Button><SearchIcon/></Button>
                 <Button><UserCircle/></Button>
                 <Button><ShoppingBagIcon/></Button>
