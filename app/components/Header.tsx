@@ -1,20 +1,22 @@
 import Link from "next/link";
-import { SearchIcon, ShoppingBagIcon, User, UserCircle } from "lucide-react";
+import { HeartIcon, SearchIcon, ShoppingBagIcon, UserCircle } from "lucide-react";
+import { Button } from "@base-ui/react";
 
 export default function Home() {
     return (
-        <div className="flex justify-between px-30 py-5">
-            <div>3elegant</div>
-            <div className="flex gap-4">
-                <Link href="/">Home</Link>
-                <Link href="/">Shop</Link>
-                <Link href="/">Product</Link>
-                <Link href="/">Contact Us</Link>
+        <div className="flex justify-between  items-center">
+            <div className="font-bold text-2xl">3elegant.</div>
+            <div className="flex gap-10 text-gray-500">
+                <Link className=" hover:text-black" href="/">Home</Link>
+                <Link className=" hover:text-black" href="#shop">Shop</Link>
+                <Link className=" hover:text-black" href="#product">Product</Link>
+                <Link className=" hover:text-black" href="#contact">Contact Us</Link>
             </div>
             <div className="flex gap-2">
-                <SearchIcon/>
-                <UserCircle/>
-                <ShoppingBagIcon/>
+                <Button><SearchIcon/></Button>
+                <Button><UserCircle/></Button>
+                <Button><ShoppingBagIcon/></Button>
+                <Button><HeartIcon/> </Button>
             </div>
         </div>
     );
