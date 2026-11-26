@@ -34,6 +34,18 @@ export default function Hero() {
               />
             </div>
           </CarouselItem>
+
+          <CarouselItem>
+            <div className="w-full h-[600px]">
+              <Image
+                src="/images/hero-section/furniture-3.jpg"
+                alt="furniture 2"
+                width={1400}
+                height={1000}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </CarouselItem>
         </CarouselContent>
 
         <CarouselPrevious size={"lg"} />
