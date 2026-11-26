@@ -33,7 +33,7 @@ export default function Auth() {
           {/* Image Section */}
           <div className="relative h-48 md:h-[580px]">
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-              <h2 className="text-2xl font-bold text-black">3legant.</h2>
+              <h2 className="text-2xl font-semibold text-black">3legant.</h2>
             </div>
             <Image
               src="/images/auth-section/auth-hero.png"
@@ -50,10 +50,10 @@ export default function Auth() {
               <DialogTitle className="text-3xl font-bold">Sign up</DialogTitle>
 
               <DialogDescription>
-                Already have an account?{" "}
+                Already have an account ?{" "}
                 <Link
                   href="/components/auth/signin"
-                  className="text-green-500 font-medium"
+                  className="text-green-500 font-medium no-underline"
                 >
                   Sign in
                 </Link>
@@ -99,11 +99,12 @@ export default function Auth() {
               {/* Checkbox */}
               <div className="flex gap-3 items-start">
                 <Checkbox
+                  className="border-neutral-500 dark:border-neutral-300"
                   checked={checked}
                   onCheckedChange={(value) => setChecked(value === true)}
                 />
 
-                <FieldDescription>
+                <FieldDescription className="text-xs">
                   I agree with{" "}
                   <span className="font-semibold text-black">
                     Privacy Policy

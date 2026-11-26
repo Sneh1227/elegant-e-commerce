@@ -38,14 +38,14 @@ export default function Signin() {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button>Sign in</Button>
+        <p>Sign in</p>
       </DialogTrigger>
       <DialogContent className="lg:max-w-[100vh] p-0 overflow-hidden max-h-[90vh]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image Section */}
           <div className="relative h-48 md:h-[580px]">
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-              <h2 className="text-2xl font-bold text-black">3legant.</h2>
+              <h2 className="text-2xl font-semibold text-black">3legant.</h2>
             </div>
             <Image
               src="/images/auth-section/auth-hero.png"
@@ -65,10 +65,10 @@ export default function Signin() {
                 </DialogTitle>
 
                 <DialogDescription>
-                  Don't have an account?{" "}
+                  Don't have an account ?{" "}
                   <Link
                     href="/components/auth/signup"
-                    className="text-green-500 font-medium"
+                    className="text-green-500 font-medium no-underline"
                   >
                     Sign up
                   </Link>
@@ -114,7 +114,7 @@ export default function Signin() {
                   <div className="flex justify-between items-center mt-2">
                     <div className="flex gap-3">
                       <Checkbox
-                        className="border-neutral-800 dark:border-neutral-300"
+                        className="border-neutral-500 dark:border-neutral-300"
                         checked={checked}
                         onCheckedChange={(value) => setChecked(value === true)}
                       />
