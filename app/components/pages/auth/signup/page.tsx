@@ -17,17 +17,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 
-export default function Auth() {
+type SignupProps = {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSwitchToSignin: () => void;
+};
+
+export default function Signup({
+  open,
+  onOpenChange,
+  onSwitchToSignin,
+}: SignupProps) {
   const [checked, setChecked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <Dialog>
-      {/* Open Popup */}
-      <DialogTrigger>
-        <p>Sign up</p>
-      </DialogTrigger>
-
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="lg:max-w-[100vh] p-0 overflow-hidden max-h-[90vh]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image Section */}
@@ -51,12 +56,13 @@ export default function Auth() {
 
               <DialogDescription>
                 Already have an account ?{" "}
-                <Link
-                  href="/components/pages/auth/signin"
-                  className="text-green-500 font-medium no-underline"
+                <Button
+                  type="button"
+                  onClick={onSwitchToSignin}
+                  className="bg-transparent p-0 hover:bg-transparent text-green-500 font-medium"
                 >
                   Sign in
-                </Link>
+                </Button>
               </DialogDescription>
             </DialogHeader>
 

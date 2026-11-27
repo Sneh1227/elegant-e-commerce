@@ -31,15 +31,22 @@ import { useState } from "react";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { Form } from "@base-ui/react";
 
-export default function Signin() {
+type SigninProps = {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSwitchToSignup: () => void;
+};
+
+export default function Signin({
+  open,
+  onOpenChange,
+  onSwitchToSignup,
+}: SigninProps) {
   const [checked, setChecked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <Dialog>
-      <DialogTrigger>
-        <p>Sign in</p>
-      </DialogTrigger>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="lg:max-w-[100vh] p-0 overflow-hidden max-h-[90vh]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image Section */}
@@ -66,12 +73,13 @@ export default function Signin() {
 
                 <DialogDescription>
                   Don't have an account ?{" "}
-                  <Link
-                    href="/components/pages/auth/signup"
-                    className="text-green-500 font-medium no-underline"
+                  <Button
+                    type="button"
+                    onClick={onSwitchToSignup}
+                    className="bg-transparent p-0 hover:bg-transparent text-green-500 font-medium"
                   >
                     Sign up
-                  </Link>
+                  </Button>
                 </DialogDescription>
               </DialogHeader>
 
