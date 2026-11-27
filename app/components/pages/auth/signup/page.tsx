@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -8,10 +8,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Field, FieldDescription, FieldGroup } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
+} from "@/app/components/ui/dialog";
+import { Field, FieldDescription, FieldGroup } from "@/app/components/ui/field";
+import { Input } from "@/app/components/ui/input";
+import { Checkbox } from "@/app/components/ui/checkbox";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -52,7 +52,7 @@ export default function Auth() {
               <DialogDescription>
                 Already have an account ?{" "}
                 <Link
-                  href="/components/auth/signin"
+                  href="/components/pages/auth/signin"
                   className="text-green-500 font-medium no-underline"
                 >
                   Sign in

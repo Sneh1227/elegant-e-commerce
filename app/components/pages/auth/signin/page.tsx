@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import {
   Card,
   CardAction,
@@ -8,13 +8,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/app/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field";
+} from "@/app/components/ui/field";
 import {
   Dialog,
   DialogContent,
@@ -22,9 +22,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
+} from "@/app/components/ui/dialog";
+import { Input } from "@/app/components/ui/input";
+import { Checkbox } from "@/app/components/ui/checkbox";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -67,7 +67,7 @@ export default function Signin() {
                 <DialogDescription>
                   Don't have an account ?{" "}
                   <Link
-                    href="/components/auth/signup"
+                    href="/components/pages/auth/signup"
                     className="text-green-500 font-medium no-underline"
                   >
                     Sign up

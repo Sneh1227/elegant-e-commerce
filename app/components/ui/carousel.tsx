@@ -6,8 +6,13 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { Button } from "@/app/components/ui/button";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "lucide-react";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -195,7 +200,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft/>
+      <ArrowLeft />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -225,7 +230,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight/>
+      <ArrowRight />
       <span className="sr-only">Next slide</span>
     </Button>
   );
